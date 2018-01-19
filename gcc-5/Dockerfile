@@ -8,6 +8,6 @@ RUN echo "deb http://ftp.debian.org/debian jessie-backports main" > /etc/apt/sou
 
 ADD protobuf-cpp-3.5.1.tar.gz /tmp
 RUN cd /tmp/protobuf-3.5.1 && ./autogen.sh\
- && ./configure --prefix=/usr --disable-shared\
+ && ./configure --prefix=/usr --disable-shared --with-pic\
  && make install && ldconfig\
  && rm -r /tmp/protobuf-3.5.1
